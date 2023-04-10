@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center mt-5">
+    <table class="w-50 bg-light text-center border border-dark">
+        <thead class="border border-dark" >
+            <th>type</th>
+            <th>amount</th>
+        </thead>
+        <tbody>
+            <tr class="bg-dark text-white border border-daanger" *ngFor="let i of transactionArray">
+                <td>{{i.type}}</td>
+                <td>{{i.amount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

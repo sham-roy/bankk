@@ -1,0 +1,16 @@
+<div class="ms-5">
+  <h3 class="ms-5 ps-4 mt-1 text-warning">{{data}}</h3>
+</div>
+<form (ngSubmit)="login()" [formGroup]="loginForm" class=" container w-25 mt-5 pe-3 ps-3 pb-5 text-light border border-dark rounded">
+  <h3 class="text-center text-secondary mt-4">Login</h3>
+  <div class="">
+    <input formControlName="acno" id="u1" name="uname" class="form-control" type="text" [placeholder]="sata">
+    <p class="bg-danger w-100 rounded text-center " *ngIf="this.loginForm.get('acno')?.errors&&this.loginForm.get('acno')?.touched">include only numbers</p>
+
+    <input formControlName="psw" id="p1" name="password" class="mt-2 form-control" type="text" placeholder="Enter password">
+  </div>
+  <div class="">
+    <button class="mt-3 form-control bg-dark text-light border border-dark">submit</button>
+  </div>
+  <p class="text-center">don't have account <a href="" routerLink="register">creat account</a></p>
+</form>

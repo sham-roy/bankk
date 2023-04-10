@@ -1,0 +1,30 @@
+{
+    "git.autorefresh": false,
+    "git.confirmEmptyCommits": false,
+    "git.decorations.enabled": false,
+    "git.countBadge": "all",
+    "git.detectSubmodules": false,
+    "git.enabled": false,
+    "git.enableStatusBarSync": false,
+    "git.openDiffOnClick": false,
+    "git.optimisticUpdate": false,
+    "git.pullTags": false,
+    "git.requireGitUserConfig": false,
+    "git.showInlineOpenFileAction": false,
+    "git.showProgress": false,
+    "git.showActionButton": {
+        "commit": false,
+        "publish": false,
+        "sync": false
+    },
+    "git.showCommitInput": false,
+    "git.suggestSmartCommit": false,
+    "git.terminalAuthentication": false,
+    "git.timeline.showAuthor": false,
+    "git.useEditorAsCommitInput": false,
+    "git.useForcePushWithLease": false,
+    "git.useIntegratedAskPass": false,
+    "github.gitAuthentication": false,
+    "search.useIgnoreFiles": false,
+    "search.useGlobalIgnoreFiles": true
+}

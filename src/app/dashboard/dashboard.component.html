@@ -1,0 +1,73 @@
+<h5 class="text-light me-2 mt-3 text-end">{{sDetails | date:"short"}}</h5>
+<div class="d-flex justify-content-end mt-2 mb-5 ">
+    <a class=" pe-2 " href="" routerLink="/transaction">transaction history</a>
+</div>
+
+<h1 class="text-center text-warning mt-5">welcome {{user}}</h1>
+
+<app-delete (onDelete)="ondeleteACC($event)" (onCancel)="cancelChild()" [item]="acno"></app-delete>
+
+<div [ngClass]="acno?'s1' : '' " class="d-flex justify-content-center ">
+
+    <form class=" w-25 mt-5 border border-dark rounded-5 me-5 clip1" [formGroup]="depositForm">
+        <div class="">
+            <h3 class="text-center text-primary mt-4">Deposit</h3>
+        </div>
+        <div class="p-2">
+            <input formControlName="amnt" id="amt1" name="amt1" class="mt-2 form-control rounded-5" type="text"
+                placeholder="amount">
+            <p class="bg-danger w-100 rounded text-center "
+                *ngIf="this.depositForm.get('amt1')?.errors&&this.depositForm.get('acno')?.touched">include only numbers
+            </p>
+
+            <input formControlName="acno" id="a1" name="acno1" class="form-control mt-2 rounded-5" type="text"
+                placeholder="account number">
+            <p class="bg-danger w-100 rounded text-center "
+                *ngIf="this.depositForm.get('acno')?.errors&&this.depositForm.get('acno')?.touched">include only numbers
+            </p>
+
+            <input formControlName="psw" id="p1" name="psw1" class="mt-2 form-control rounded-5" type="text"
+                placeholder="password">
+
+        </div>
+        <div class="m-2 p-2">
+            <button (click)="deposit()" type="submit"
+                class=" form-control bg-primary text-light border border-dark rounded-5">Deposite</button>
+        </div>
+    </form>
+
+    <form class="ms-5  w-25 mt-5 pb-5 text-light border border-dark rounded rounded-5 clip1" [formGroup]="withDrawForm">
+        <div>
+            <div class="">
+                <h3 class="text-center text-danger mt-4">Withdraw</h3>
+            </div>
+        </div>
+        <div class="p-2">
+            <input formControlName="amnt1" name="amt" class="mt-2 form-control rounded-5" type="text"
+                placeholder="amount">
+            <p class="bg-danger w-100 rounded text-center "
+                *ngIf="this.withDrawForm.get('amnt1')?.errors&&this.withDrawForm.get('amnt1')?.touched">include only
+                numbers</p>
+
+            <input formControlName="acno1" name="acno" class="form-control mt-2 rounded-5" type="text"
+                placeholder="account number">
+            <p class="bg-danger w-100 rounded text-center "
+                *ngIf="this.withDrawForm.get('acno1')?.errors&&this.withDrawForm.get('acno1')?.touched">include only
+                numbers</p>
+
+            <input formControlName="psw1" name="psw" class="mt-2 form-control rounded-5" type="text"
+                placeholder="password">
+
+        </div>
+        <div class="p-2 m-2">
+            <button (click)="withdraw()"
+                class="form-control bg-danger text-light border border-dark rounded-5 ">withdraw</button>
+        </div>
+    </form>
+</div>
+<div class="d-flex justify-content-center mt-2 ">
+    <button (click)="logout()" class="btn border text-primary w-25 clip1">logout</button>
+</div>
+<div class="d-flex justify-content-center mt-2 mb-5 ">
+    <button (click)="deleteAcc()" class="btn border text-primary w-25 clip1">delete</button>
+</div>

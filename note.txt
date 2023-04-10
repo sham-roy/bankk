@@ -1,0 +1,197 @@
+Angular - ng v
+---------
+
+npm - node package module
+
+install
+        - npm -g @angular/cli@latest 
+
+project creation
+        - ng new project name
+
+running command 
+        - ng serve --open
+
+Angular technologies
+
+-html
+-css
+-typeScript- strictly typed - transpiling 
+
+number : any
+
+transpiling - browser convert ts code to js while running
+
+npm i
+
+root modules
+      -  root components
+             - sub modules
+
+      -  sub modules
+              -  components
+
+@ : indicates decorators
+        decorators used to store meta data
+                meta data - data inside data
+
+create ne component
+        - ng generate component component_name
+        - ng g c first
+
+working cycle of angular components 
+-----------------------------------
+
+constructor -> ngOnInit -- other methodes 
+
+
+data Binding In angular 
+-----------------------
+TS - component 
+html - view 
+
+        1 - one way Binding
+        ------------------
+                1.1 Ts to html (component to view data sharing)      
+                        a. string interpollation {{ }}
+                        b. property binding [property_name]="data"
+
+                1.2 html to ts (view to component)
+                        a. event binding : (eventname)="methodes()"
+                        b. $event binding : (eventname)="method($event)"
+                        c. event binding with templet rendering variable
+        2 - two way binding 
+                2.1 ngModel     [(ngModel)]="variable"
+                         -FormsModule    -module used to apply ngModule
+
+
+path setting in angular
+------------------------
+
+path set in root module routing file 
+each page need different paths
+landing page is empty ""
+
+redirection in angurlar
+-----------------------
+method - navigateByUrl(path)
+class  - Router
+module - AppRoutingModule
+
+folder - file - class - methodes
+package - module
+
+dependancy Injection 
+---------------------------
+
+to use a method of class in another class
+
+in constructor
+
+        accessSpecifier referance:ClassName
+
+        access specifier - pvt / public 
+         - private : can use the injecting class only in that class
+         - public : can the injecting calss in other classes of that file 
+
+anglar services
+---------------
+
+ its a file in angular which all componetns can acess the content of service file
+         -creat          ng g s fileName
+
+angular Dierectives
+---------------------
+
+used to manipulate DOM 
+
+ 1 - component Dierective
+ 2 - structural directive 
+         - *ngFor 
+         - *ngIf
+ 3 - atribute Dierectives 
+         - [ngClass]
+
+        
+
+
+form validation in angular
+----------------------------
+
+ form creation in angular
+
+         1.tamplate driven form
+         2.model driven form
+
+   model DRiven form 
+   ---------------------
+         - reactive forms 
+                   -ReactiveFormsMOdule - module used to create model form 
+                        -FormBuilder    - class used to create model form 
+
+                   -a model conatin     - form 
+                                        - array
+                                        - controller
+
+local storage in angular
+------------------------
+CRUD -create read update delete
+
+c - localstorage.setItem()
+R - localstorage.getItem()
+U - localstorage.setItem()
+D - localstorage.removeItem()
+
+child parent communication in angular-
+--------------------------------------------
+ 
+  parent - child data sharing
+  ----------------------------
+         @input() - decorator used to share data from parent to child
+
+  child to parent data sharing
+  ----------------------------
+         
+
+
+date and time in angular
+------------------------
+
+ date - class used to access current date data in angurlar
+
+
+angular pipes
+-------------
+
+ used to convert datas to another format
+
+event creation in anglar (user defined events)
+-------------------------
+ 
+ EventEmitter - class used to create events
+ emit() - method to specify when the event happens
+
+
+API Creation In angular
+--------------------------
+
+HttpClientModule  -module 
+HttpCliient  - class
+
+        methodes
+        -------
+        get post put patch delete
+
+asynchronous in js
+
+        pomise  - then()
+                - catch ()      - for rejected requests
+
+asynchronous in ts      rxjs(raactive extension for js) - extension
+
+        observable  - subscribe ()
+                    - catch()   -  for rejected requests
+
+header creation in angular
+---------------------------
+ HttpHeader - class used to generate Headers
